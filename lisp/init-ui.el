@@ -9,4 +9,6 @@
 
 (global-hl-line-mode t)
 
+(setq linum-format "%d ")
+
 (provide 'init-ui)

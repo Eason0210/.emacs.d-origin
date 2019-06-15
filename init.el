@@ -17,12 +17,6 @@
 (require 'init-keybindings)
 (require 'init-org)
 
-(electric-indent-mode t)
-
-(setq linum-format "%d ")
-
-(setq recentf-max-menu-items 25)
-
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 
 (load-file custom-file)
