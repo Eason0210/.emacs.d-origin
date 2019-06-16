@@ -21,6 +21,8 @@
 			js2-refactor
 			expand-region
 			iedit
+			htmlize
+			org-pomodoro
 			)  "Default packages")
 
 (setq package-selected-packages aqua/packages)
@@ -93,8 +95,6 @@
 
   (setq indent-tabs-mode nil))
 
-(global-set-key (kbd "C-c t i") 'my-toggle-web-indent)
-
 ;;config for js2-refactor
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
 
@@ -128,5 +128,5 @@
 (global-set-key (kbd "C-=") 'er/expand-region)
 
 (require 'iedit)
-
+(require 'org-pomodoro)
 (provide 'init-packages)

@@ -87,4 +87,6 @@
 	regexp-history)
   (call-interactively 'occur))
 
+(setq inhibit-compacting-font-caches t) ; Don’t compact font caches during GC.
+
 (provide 'init-better-defaults)

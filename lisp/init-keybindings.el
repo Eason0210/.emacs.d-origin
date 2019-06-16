@@ -19,6 +19,9 @@
 ;;for Org key bindings
 (global-set-key (kbd "C-c a") 'org-agenda)
 
+;;remenber
+(global-set-key (kbd "C-c r") 'org-capture)
+
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 
 (global-set-key (kbd "M-/") 'hippie-expand)
@@ -33,5 +36,7 @@
 (global-set-key (kbd "M-s o") 'occur-dwim)
 
 (global-set-key (kbd "M-s i" ) 'counsel-imenu)
+
+(global-set-key (kbd "C-c t i") 'my-toggle-web-indent)
 
 (provide  'init-keybindings)

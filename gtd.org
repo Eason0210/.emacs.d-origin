@@ -1,0 +1,7 @@
+* 工作安排
+
+** TODO [#B] Day6 学习笔记
+   DEADLINE: <2019-06-16 周日 23:00> SCHEDULED: <2019-06-16 周日 19:40>
+
+** TODO [#B] Clean up Emacs config
+
