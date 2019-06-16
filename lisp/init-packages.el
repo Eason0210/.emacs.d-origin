@@ -23,6 +23,9 @@
 			iedit
 			htmlize
 			org-pomodoro
+			yasnippet-snippets
+			auto-yasnippet
+			
 			)  "Default packages")
 
 (setq package-selected-packages aqua/packages)
@@ -129,4 +132,11 @@
 
 (require 'iedit)
 (require 'org-pomodoro)
+
+(require 'yasnippet-snippets)
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
+
+(require 'auto-yasnippet)
+
 (provide 'init-packages)
