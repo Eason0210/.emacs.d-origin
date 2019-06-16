@@ -35,6 +35,7 @@
 
 (define-abbrev-table 'global-abbrev-table
   '(
+    ("8int" "interactive" nil 0)
     ("8ms" "Microsoft" nil 0)
     ("8zl" "zilongshanren" nil 0)
    ))

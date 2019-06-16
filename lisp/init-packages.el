@@ -6,7 +6,7 @@
 (require 'cl)
 
 ;;add whatever packages you want here
-(defvar zilongshanren/packages '(
+(defvar aqua/packages '(
 				 company
 				 monokai-theme
 				 hungry-delete
@@ -16,19 +16,20 @@
 				 js2-mode
 				 nodejs-repl
 				 popwin
+				 use-package
 				 )  "Default packages")
 
-(setq package-selected-packages zilongshanren/packages)
+(setq package-selected-packages aqua/packages)
 
-(defun zilongshanren/packages-installed-p ()
-    (loop for pkg in zilongshanren/packages
+(defun aqua/packages-installed-p ()
+    (loop for pkg in aqua/packages
           when (not (package-installed-p pkg)) do (return nil)
           finally (return t)))
 
-(unless (zilongshanren/packages-installed-p)
+(unless (aqua/packages-installed-p)
     (message "%s" "Refreshing package database...")
     (package-refresh-contents)
-    (dolist (pkg zilongshanren/packages)
+    (dolist (pkg aqua/packages)
         (when (not (package-installed-p pkg))
 	  (package-install pkg))))
 
@@ -36,7 +37,14 @@
 (global-hungry-delete-mode)
 
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
-(smartparens-global-mode t)
+;;(smartparens-global-mode t)
+
+(use-package smartparens-config
+  :ensure smartparens
+  :config (progn (show-smartparens-global-mode t)))
+
+(add-hook 'prog-mode-hook 'turn-on-smartparens-strict-mode)
+(add-hook 'markdown-mode-hook 'turn-on-smartparens-strict-mode)
 
 ;;config for swiper
 (ivy-mode 1)
