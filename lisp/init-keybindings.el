@@ -34,9 +34,16 @@
 
 
 (global-set-key (kbd "M-s o") 'occur-dwim)
+;;(global-set-key (kbd "M-s e") 'iedit-mode)
 
 (global-set-key (kbd "M-s i" ) 'counsel-imenu)
 
 (global-set-key (kbd "C-c t i") 'my-toggle-web-indent)
+
+(with-eval-after-load 'company
+  (define-key company-active-map (kbd "M-n") nil)
+  (define-key company-active-map (kbd "M-p") nil)
+  (define-key company-active-map (kbd "C-n") #'company-select-next)
+  (define-key company-active-map (kbd "C-p") #'company-select-previous))
 
 (provide  'init-keybindings)
