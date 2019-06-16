@@ -26,4 +26,12 @@
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
+;;keybindings for js2-refactor
+(js2r-add-keybindings-with-prefix "C-c C-m")
+
+
+(global-set-key (kbd "M-s o") 'occur-dwim)
+
+(global-set-key (kbd "M-s i" ) 'counsel-imenu)
+
 (provide  'init-keybindings)
