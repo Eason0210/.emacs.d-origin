@@ -37,14 +37,15 @@
 (global-hungry-delete-mode)
 
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
-;;(smartparens-global-mode t)
+(smartparens-global-mode t)
+(sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
 
-(use-package smartparens-config
-  :ensure smartparens
-  :config (progn (show-smartparens-global-mode t)))
+;;(use-package smartparens-config
+;;  :ensure smartparens
+;;  :config (progn (show-smartparens-global-mode t)))
 
-(add-hook 'prog-mode-hook 'turn-on-smartparens-strict-mode)
-(add-hook 'markdown-mode-hook 'turn-on-smartparens-strict-mode)
+;;(add-hook 'prog-mode-hook 'turn-on-smartparens-strict-mode)
+;;(add-hook 'markdown-mode-hook 'turn-on-smartparens-strict-mode)
 
 ;;config for swiper
 (ivy-mode 1)
